@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: Specificity & Cascade</title>
+    <style>
+      /* specificity of this selector is 1 */
+      h1 {
+        color: red;
+        background-color: yellow;
+      }
+      /* specificity of this selector is 10 */
+      .red {
+        color: red;
+      }
+      /* specificity of this selector is 1+ 10 = 11 */
+      h1.yellow {
+        color: yellow;
+      }
+      /* specificity of this selector is 10 */
+      .blue {
+        color: blue !important;
+        background-color: aqua;
+      }
+      /* specificity of this selector is 10 */
+      [data-x="a"] {
+        background-color: antiquewhite;
+      }
+      /* specificity of this selector is 1 + 10 + 10 + 10+ 10 = 41 */
+      /* a.harryclass.rohan-class[href]:hover {
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="red yellow blue" data-x="a">Specificity</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* elemental selector */
+        /* div{
+            background-color: red;
+        } */
+
+        /* class selector */
+        .red{
+            background-color: red;
+        }
+
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+        /* Child selector */
+        div > p{
+            color: white;
+            background-color: blue;
+        }
+        /* Descendant selector */
+        div p{
+            color: white;
+            background-color: blue;
+        }
+        /* Universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color:aqua
+        }
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class = "red">
+        I am a div
+        <article>
+            <p>
+                I am a paragraph
+            </p>
+        </article>
+        
+    </div>
+    <div id = "green">
+        I am another div
+    </div>
+    <div>
+        <a href="http://www.chiragfilms.studio">chiragfilms</a>
+    </div>
+
+</body>
+</html>
